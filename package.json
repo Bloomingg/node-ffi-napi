@@ -1,8 +1,8 @@
 {
-  "name": "@lwahonen/ffi-napi",
-  "version": "4.0.13",
+  "name": "@openim/ffi-napi",
+  "version": "4.0.14",
   "license": "MIT",
-  "author": "LWAhonen@github",
+  "author": "bloomingg@github",
   "contributors": [
     "Rick Branson <rick@diodeware.com>",
     "Nathan Rajlich <nathan@tootallnate.net>",
@@ -30,7 +30,7 @@
     "debug": "^4.1.1",
     "get-uv-event-loop-napi-h": "^1.0.5",
     "node-addon-api": "^3.2.1",
-    "@lwahonen/ref-napi": "^4.0.8",
+    "@openim/ref-napi": "^4.0.11",
     "ref-struct-di": "^1.1.0",
     "node-gyp-build": "^4.5.0"
   },
@@ -44,11 +44,11 @@
   },
   "scripts": {
     "install": "node-gyp-build",
-    "prebuild": "prebuildify -t 12.22.12 -t 13.14.0 -t 14.18.3 -t 14.20.1 -t 14.21.2 -t 15.14.0 -t 16.19.0 -t 17.9.1 -t 18.12.1 -t 19.3.0 --napi --tag-armv --tag-uv --tag-libc"
+    "prebuild": "prebuildify -t 12.22.12 -t 13.14.0 -t 14.18.3 -t 14.20.1 -t 14.21.2 -t 15.14.0 -t 16.19.0 -t 17.9.1 -t 18.12.1 -t 19.3.0 --napi --platform win32 --arch ia32 --tag-uv"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/lwahonen/node-ffi-napi.git"
+    "url": "http://github.com/bloomingg/node-ffi-napi.git"
   },
   "bugs": {
     "url": "http://github.com/node-ffi-napi/node-ffi-napi/issues"

@@ -6,9 +6,9 @@ RUN python3 -m ensurepip
 RUN pip3 install --no-cache --upgrade pip setuptools
 
 WORKDIR /app
-RUN npm i @lwahonen/ffi-napi
+RUN npm i @openim/ffi-napi
 
-WORKDIR /app/node_modules/@lwahonen/ffi-napi/ 
-RUN npm i -g node-gyp node-gyp-build node-addon-api prebuildify && npm i node-gyp node-gyp-build node-addon-api @lwahonen/ref-napi && rm -r prebuilds 
+WORKDIR /app/node_modules/@openim/ffi-napi/ 
+RUN npm i -g node-gyp node-gyp-build node-addon-api prebuildify && npm i node-gyp node-gyp-build node-addon-api @openim/ref-napi && rm -r prebuilds 
 
 RUN prebuildify -t 12.22.12 -t 13.14.0 -t 14.18.3 -t 14.20.1 -t 14.21.2 -t 15.14.0 -t 16.19.0 -t 17.9.1 -t 18.12.1 -t 19.3.0 --napi --tag-armv --tag-uv --tag-libc
